@@ -20,3 +20,19 @@ def aboutPage(request):
     for customer in customers:
         print(customer["_id"],getPurchases(str(customer["_id"])))
     return render(request,"HomePage/example.html",{"sum":sum})
+
+def login(request):
+    return render(request, "HomePage/login.html", {})
+
+def categorySelection(request):
+    return render(request,"HomePage/categorySelection.html",{})
+
+def transactionUpdate(request):
+    return render(request,"HomePage/transactionUpdate.html",{})
+
+def signUp(request):
+    print(reverse('signUp'))
+    return render(request,"HomePage/signUp.html",{})
+
+def dashboard(request):
+    return render(request,"HomePage/dashboard.html",{})
